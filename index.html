@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Nerds</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="index-logo">
+        <a><img src="img/index-logo.png" alt="Логотип Nerds" width="160" height="65"></a>
+      </div>
+      <nav class="main-menu">
+        <ul>
+          <li><a href="#">Студия</a></li>
+          <li><a href="#">Клиенты</a></li>
+          <li><a href="./catalog.html">Магазин</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+      <ul class="user-block">
+        <li class="cart"><a href="#">Корзина</a></li>
+      </ul>
+    </header>
+
+    <main>
+      <section class="index-slider">
+        <div class="slide-1">
+          <h2>Долго, дорого, скрупулезно.</h2>
+          <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+          <a class="btn" href="#">Узнать больше</a>
+        </div>
+        <div class="slide-2">
+          <h2>Любим математику как никто другой</h2>
+          <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+          <a class="btn" href="#">Узнать больше</a>
+        </div>
+        <div class="slide-3">
+          <h2>Только ночь, только хардкор</h2>
+          <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+          <a class="btn" href="#">Узнать больше</a>
+        </div>
+        <div class="slider-controls">
+          <input type="radio" id="slider-btn-1" name="slider-toggle">
+          <input type="radio" id="slider-btn-2" name="slider-toggle">
+          <input type="radio" id="slider-btn-3" name="slider-toggle">
+          <label for="slider-btn-1"></label>
+          <label for="slider-btn-2"></label>
+          <label for="slider-btn-3"></label>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="services-item">
+          <div class="services-item-img"></div>
+          <h2>Веб-сайты</h2>
+          <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+          <a class="btn" href="#">Заказать</a>
+        </div>
+        <div class="services-item">
+          <div class="services-item-img"></div>
+          <h2>Приложения</h2>
+          <p>Покорите топ-10 приложений в AppStore и Google Play</p>
+          <a class="btn" href="#">Заказать</a>
+        </div>
+        <div class="services-item">
+          <div class="services-item-img"></div>
+          <h2>Презентации</h2>
+          <p>Вы даже не подозреваете, насколько вы изумительны!</p>
+          <a class="btn" href="#">Заказать</a>
+        </div>
+      </section>
+
+      <section class="about-us">
+        <div class="about-us-item">
+          <h2>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h2>
+          <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы</p>
+          <p><b>Выполняем заказы на разработку:</b></p>
+          <ul>
+            <li>Веб-сайтов любой сложности</li>
+            <li>Мобильных приложений для iOS и Android</li>
+            <li>Слайдшоу и видео для корпоративных презентаций</li>
+          </ul>
+        </div>
+        <div class="about-us-item">
+          <img src="img/nerds-illustration.jpg" alt="Иллюстрация Nerds" width="360" height="208">
+          <p><b>с 2004 года Любим точность во всем:</b></p>
+          <b class="number">146%</b>
+          <p>Уровень самоотдачи</p>
+          <b class="number">100%</b>
+          <p>Соблюдение сроков</p>
+          <b class="number">50%</b>
+          <p>Минимальная предоплата</p>
+        </div>
+      </section>
+
+      <section class="orders">
+        <div class="orders-item">
+          <img src="img/logo-1.png" alt="HTMLAcademy" width="209" height="87">
+        </div>
+        <div class="orders-item">
+          <img src="img/logo-2.png" alt="Borodinsky" width="209" height="87">
+        </div>
+        <div class="orders-item">
+          <img src="img/logo-3.png" alt="Pink" width="209" height="87">
+        </div>
+        <div class="orders-item">
+          <img src="img/logo-4.png" alt="Mishka" width="209" height="87">
+        </div>
+      </section>
+
+      <section class="map">
+        <div class="contacts">
+          <h2>NЁRDS DESIGN STUDIO</h2>
+          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <p>тел. +7 (812) 275-75-75</p>
+          <a class="btn" href="#">Напишите нам</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-social">
+        <a href="#">VKontakte</a>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <p><b>Давайте дружить, это выгодно!</b></p>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </footer>
+
+    <section class="modal-content">
+      <h2>Напишите нам</h2>
+      <button class="modal-content-close" type="button">Закрыть</button>
+      <form class="feedback-form" action="index.html" method="post">
+        <label for="feedback-name">Ваше имя:</label>
+        <input id="feedback-name" type="text" name="feedback-name" value="" placeholder="Представьтесь, пожалуйста">
+        <label for="feedback-email">Ваш e-mail:</label>
+        <input id="feedback-email" type="email" name="feedback-email" value="" placeholder="Для отправки ответа">
+        <label for="feedback-text">Текст письма:</label>
+        <textarea id="feedback-text" name="feedback-text" rows="8" cols="80" placeholder="В свободной форме"></textarea>
+        <button class="btn" type="submit">Отправить</button>
+      </form>
+    </section>
+  </body>
+</html>
