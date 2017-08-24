@@ -752,6 +752,7 @@ a.sorting-up::before {
   width: 360px;
   position: relative;
   margin-bottom: 30px;
+  overflow: hidden;
 }
 
 .catalog-item-head {
@@ -761,7 +762,7 @@ a.sorting-up::before {
   padding-left: 16px;
   font-size: 0;
   vertical-align: middle;
-  transition: 0.5s;
+  transition: 0.8s;
 }
 
 .circle {
@@ -776,15 +777,16 @@ a.sorting-up::before {
 .catalog-item-discription {
   visibility: hidden;
   position: absolute;
-  bottom: 6px;
+  /*bottom: 6px;*/
+  bottom: -246px;
   left: 0;
   background-color: #eeeeee;
   text-align: center;
   width: 240px;
   height: 230px;
   padding: 0 60px;
-  opacity: 0;
-  transition: 0.5s;
+  opacity: 0.5;
+  transition: 0.8s;
 }
 
 .catalog-item-discription h2 {
@@ -814,6 +816,7 @@ a.sorting-up::before {
 .catalog-item:hover .catalog-item-discription {
   visibility: visible;
   opacity: 1;
+  bottom: 6px;
 }
 
 .paginator {
