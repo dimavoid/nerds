@@ -68,6 +68,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 5px;
   padding: 5px 0;
+  transition: 0.5s;
 }
 
 .main-menu a:hover,
@@ -131,6 +132,7 @@ body {
   background-color: #ffffff;
   margin-right: 14px;
   cursor: pointer;
+  transition: 1.5s;
 }
 
 .slider-controls label:last-child {
@@ -138,13 +140,19 @@ body {
 }
 
 .slide {
-  display: none;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  visibility: hidden;
+  opacity: 0;
   width: 1160px;
   height: 430px;
+  background-color: #eeeeee;
   overflow: hidden;
   background-repeat: no-repeat;
-  background-position: 430px bottom;
+  /*background-position: 430px bottom;*/
+  background-position: -900px bottom;
+  transition: 1.5s;
 }
 
 .slide h2 {
@@ -166,7 +174,6 @@ body {
 
 .slide .btn {
   padding: 16px 55px;
-
 }
 
 .index-slider input {
@@ -176,7 +183,9 @@ body {
 #slider-btn-1:checked ~ .slide-1,
 #slider-btn-2:checked ~ .slide-2,
 #slider-btn-3:checked ~ .slide-3 {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  background-position: 430px bottom;
 }
 
 #slider-btn-1:checked ~ .slider-controls label[for="slider-btn-1"],
@@ -211,6 +220,7 @@ body {
   padding: 16px 40px;
   border-radius: 2px;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .btn:hover {
@@ -566,6 +576,7 @@ fieldset.feature-filter {
   margin-bottom: 18px;
   padding-left: 35px;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .grid-filter label::before {
@@ -578,12 +589,13 @@ fieldset.feature-filter {
   height: 20px;
   border: 3px solid #b8b8b8;
   border-radius: 50%;
+  transition: 0.5s;
 }
 
 .grid-filter label::after {
   content: "";
   position: absolute;
-  display: none;
+  visibility: hidden;
   top: 7px;
   left: 7px;
   width: 0;
@@ -591,6 +603,8 @@ fieldset.feature-filter {
   background-color: #b8b8b8;
   border: 6px solid #b8b8b8;
   border-radius: 50%;
+  opacity: 0;
+  transition: 0.5s;
 }
 
 .feature-filter label::before {
@@ -603,12 +617,13 @@ fieldset.feature-filter {
   height: 20px;
   border: 2px solid #b8b8b8;
   border-radius: 4px;
+  transition: 0.5s;
 }
 
 .feature-filter label::after {
   content: "";
   position: absolute;
-  display: none;
+  visibility: hidden;
   top: 2px;
   left: 8px;
   width: 4px;
@@ -618,12 +633,15 @@ fieldset.feature-filter {
   border-top: none;
   border-radius: 4px;
   transform: rotate(45deg);
+  opacity: 0;
+  transition: 0.5s;
 }
 
 #grid-1:checked + label::after,
 #grid-2:checked + label::after,
 #grid-3:checked + label::after {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 #feature-1:checked + label::after,
@@ -631,7 +649,8 @@ fieldset.feature-filter {
 #feature-3:checked + label::after,
 #feature-4:checked + label::after,
 #feature-5:checked + label::after {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .filters-form label:hover,
@@ -647,6 +666,7 @@ fieldset.feature-filter {
   background-color: #eeeeee;
   color: #000000;
   font-weight: 500;
+  transition: 0.5s;
 }
 
 .filters-form .btn:hover {
@@ -741,6 +761,7 @@ a.sorting-up::before {
   padding-left: 16px;
   font-size: 0;
   vertical-align: middle;
+  transition: 0.5s;
 }
 
 .circle {
@@ -753,7 +774,7 @@ a.sorting-up::before {
 }
 
 .catalog-item-discription {
-  display: none;
+  visibility: hidden;
   position: absolute;
   bottom: 6px;
   left: 0;
@@ -762,6 +783,8 @@ a.sorting-up::before {
   width: 240px;
   height: 230px;
   padding: 0 60px;
+  opacity: 0;
+  transition: 0.5s;
 }
 
 .catalog-item-discription h2 {
@@ -789,7 +812,8 @@ a.sorting-up::before {
 }
 
 .catalog-item:hover .catalog-item-discription {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .paginator {
@@ -814,6 +838,7 @@ a.sorting-up::before {
   text-align: center;
   padding-top: 15px;
   border: 2px solid #eeeeee;
+  transition: 0.5s;
 }
 
 .paginator .btn-next {
@@ -824,6 +849,7 @@ a.sorting-up::before {
   padding: 0;
   text-align: center;
   padding-top: 15px;
+  transition: 0.5s;
 }
 
 .paginator a:hover,
@@ -871,6 +897,7 @@ a.sorting-up::before {
   background-color: #e1e1e1;
   border-radius: 50%;
   border: 24px solid #e1e1e1;
+  transition: 0.5s;
 }
 
 .footer-social a:last-child {
