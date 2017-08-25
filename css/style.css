@@ -28,10 +28,33 @@ body {
   align-items: flex-end;
 }
 
+.index-logo a {
+  position: relative;
+  display: block;
+}
+
 .index-logo img {
   display: block;
   width: 160px;
   height: 65px;
+}
+
+.logo-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(238, 238, 238, 0);
+  transition: 0.4s;
+}
+
+.index-logo a:not(.logo-active):hover .logo-overlay {
+  background-color: rgba(238, 238, 238, 0.3);
+}
+
+.index-logo a:not(.logo-active):active .logo-overlay {
+  background-color: rgba(238, 238, 238, 0.7);
 }
 
 .main-menu {
@@ -68,7 +91,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 5px;
   padding: 5px 0;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .main-menu a:hover,
@@ -220,7 +243,7 @@ body {
   padding: 16px 40px;
   border-radius: 2px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .btn:hover {
@@ -395,9 +418,33 @@ body {
 }
 
 .orders-item {
+  position: relative;
   width: 260px;
   text-align: center;
   vertical-align: top;
+}
+
+.orders-item a {
+  position: relative;
+  display: block;
+}
+
+.orders-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: 0.4s;
+}
+
+.orders-item a:hover .orders-overlay {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.orders-item a:active .orders-overlay {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 /*map and contacts*/
@@ -576,7 +623,7 @@ fieldset.feature-filter {
   margin-bottom: 18px;
   padding-left: 35px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .grid-filter label::before {
@@ -589,7 +636,7 @@ fieldset.feature-filter {
   height: 20px;
   border: 3px solid #b8b8b8;
   border-radius: 50%;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .grid-filter label::after {
@@ -604,7 +651,7 @@ fieldset.feature-filter {
   border: 6px solid #b8b8b8;
   border-radius: 50%;
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .feature-filter label::before {
@@ -617,7 +664,7 @@ fieldset.feature-filter {
   height: 20px;
   border: 2px solid #b8b8b8;
   border-radius: 4px;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .feature-filter label::after {
@@ -634,7 +681,7 @@ fieldset.feature-filter {
   border-radius: 4px;
   transform: rotate(45deg);
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 #grid-1:checked + label::after,
@@ -666,7 +713,7 @@ fieldset.feature-filter {
   background-color: #eeeeee;
   color: #000000;
   font-weight: 500;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .filters-form .btn:hover {
@@ -841,7 +888,7 @@ a.sorting-up::before {
   text-align: center;
   padding-top: 15px;
   border: 2px solid #eeeeee;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .paginator .btn-next {
@@ -852,7 +899,7 @@ a.sorting-up::before {
   padding: 0;
   text-align: center;
   padding-top: 15px;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .paginator a:hover,
@@ -893,6 +940,7 @@ a.sorting-up::before {
 }
 
 .footer-social .social-btn {
+  position: relative;
   font-size: 0;
   width: 31px;
   height: 31px;
@@ -900,7 +948,19 @@ a.sorting-up::before {
   background-color: #e1e1e1;
   border-radius: 50%;
   border: 24px solid #e1e1e1;
-  transition: 0.5s;
+  transition: 0.4s;
+}
+
+.social-overlay {
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  top: -24px;
+  left: -24px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  border: 24px solid transparent;
+  transition: 0.4s;
 }
 
 .footer-social a:last-child {
@@ -928,8 +988,12 @@ a.sorting-up::before {
 }
 
 .social-btn:active {
-  border-color: #d7373b;
-  background-color: #d7373b;
+  border-color: #e74246;
+  background-color: #e74246;
+}
+
+.social-btn:active .social-overlay{
+  background-color: rgba(215, 55, 59, 0.6);
 }
 
 .main-footer p {
