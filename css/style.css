@@ -173,9 +173,10 @@ body {
   background-color: #eeeeee;
   overflow: hidden;
   background-repeat: no-repeat;
-  /*background-position: 430px bottom;*/
-  background-position: -900px bottom;
-  transition: 1.5s;
+  background-position: 430px bottom;
+  /*background-position: -900px bottom;*/
+  transform: translateX(-300%);
+  transition: 1.5s cubic-bezier(1, 0.58, 0, 0.58);
 }
 
 .slide h2 {
@@ -208,7 +209,8 @@ body {
 #slider-btn-3:checked ~ .slide-3 {
   visibility: visible;
   opacity: 1;
-  background-position: 430px bottom;
+  /*background-position: 430px bottom;*/
+  transform: translateX(0);
 }
 
 #slider-btn-1:checked ~ .slider-controls label[for="slider-btn-1"],
@@ -1133,6 +1135,7 @@ a.sorting-up::before {
   line-height: 24px;
   font-weight: 400;
   outline: none;
+  font-family: "Roboto", "Araial", sans-serif;
 }
 
 .feedback-form input:hover,
@@ -1147,6 +1150,25 @@ a.sorting-up::before {
 
 .feedback-form .btn {
   border: none;
+}
+
+@keyframes bounce {
+  0% { transform: translateX(-2000px); }
+  70% { transform: translateX(30px); }
+  90% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+.modal-content-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.feedback-form .modal-error,
+.feedback-form .modal-error:hover,
+.feedback-form .modal-error:active {
+  color: #e74246;
+  border-color: #e74246;
 }
 
 /*
